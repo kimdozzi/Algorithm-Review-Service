@@ -17,20 +17,21 @@ spring:
 
         format_sql: true
 
-logging.level:
-  # 옵션은 logger를 통해 하이버네이트 실행 sql을 남김
-  org.hibernate.SQL: debug
+  security:
+    oauth2:
+      client:
+        registration:
+          github :
+            client-id: da5b2fb0aaa3713df827
+            client-secret: 6d45f9eccc32d7c9a10e8e7d2f25bd7001fd73b9
+            scope:
+              - email
+              - profile
 
-  # org.hibernate.type: trace
 
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          google :
-#            client-id: 758960019232-slgejmq7qiqbs8t03gkjl7cnaisa64f4.apps.googleusercontent.com
-#            client-secret: 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
-#            scope:
-#              - email
-#              - profile
-
+          google:
+            client-id: 1087770443158-75onsd4cnq4nn4qqdabdlgv8opai1bnd.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
